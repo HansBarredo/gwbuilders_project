@@ -33,9 +33,13 @@ p {
   background-color: green;
 }
 
+#logo{
+  height: 50px;
+  width: auto;
+}
+
 #hero-container {
   padding: 0;
-  margin-bottom: 20px;
 }
 
 #hero {
@@ -69,8 +73,9 @@ p {
   justify-content: center;
 }
 
+
 div > #services-container {
-  margin-top: 5em;
+  margin-top: 2em;
   background-color: rgb(255, 255, 255);
 }
 
@@ -105,14 +110,13 @@ section > div > .col-lg-3{
   height: auto;
 }
 
-section > #services-heading{
-  margin-top: 2em;
-  margin-bottom: 1em;
+.serv_profile > h4{
+  padding: 0.5em 1em ;
+  margin: 0;
 }
 
-
 .proj_profile > h4{
-  padding: 0.5em 0;
+  padding: 0.5em ;
   margin: 0;
 }
 
@@ -129,11 +133,6 @@ section > #services-heading{
   justify-self: end;
   background-color: var(--accent-beige);
 }
-
-section > .cust-cont{
-  padding: 100px 0;
-}
-
 div > #pr#projects-container {
   margin-top: 5em;
   background-color: rgb(255, 255, 255);
@@ -155,13 +154,14 @@ div > #pr#projects-container {
 .proj-card{
   background-color: white;
   box-shadow: 0px 12px 10px 2px rgba(120, 120, 120, 0.11);
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 0 0 1.5rem 0;
+  margin-top: 2rem;
 }
 
  .img-proj {
   object-fit: cover;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1rem 1rem 0 0;
   height: 30vh;
   margin-bottom: 1rem;
 }
@@ -170,12 +170,90 @@ section > .cust-cont-project{
   height: 70vh;
 }
 
-.proj-card h4, a{
+.proj-card h4, a, p{
   padding: 0 1.5rem;
+  text-align: left;
 }
 
 
 .proj-card a{
   text-decoration: none;
   color:grey ;
+  float: left;
+}
+
+.proj-card p{
+  text-align: justify;
+}
+
+
+#project-container{
+  width: auto;
+  margin-top: 5rem;
+}
+
+div > #text-heading > h1{
+  text-align:left;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+#text-heading{
+  text-align: left;
+}
+
+#text-heading p{
+  margin: 0;
+  padding: 0;
+}
+
+#project-text > span{
+  width: 100%;
+  justify-items: center;
+  font-size: medium;
+}
+
+img#photo-main{
+  height: 60vh;
+  object-fit: cover;
+}
+
+#text-info{
+  font-size: medium;
+  text-align: center;
+  padding: 0 5rem;
+
+}
+
+#image-contact{
+  background-image: url(../images/contact_bg.jpg);
+  object-fit: cover;
+  background-size: cover;
+}
+
+#overlay-img{
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+#contact-us > h1{
+  color: white;
+}
+
+#text-contact > div > h4{
+  color: white;
+}
+
+#loc-container > p{
+  color: white;
+}
+
+#loc-container{
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+#button-contact{
+  background-color: #1d781d;
 }
