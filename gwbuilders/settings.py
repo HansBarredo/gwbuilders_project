@@ -88,11 +88,10 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("DATABASE_URL")
 
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
+
+DATABASES ['default'] =dj_database_url.parse("postgresql://gwbuilders_user:SsdsPrQBgpljBMWsQcBg3HXUodV7mS6s@dpg-ctgobi56l47c73e8uccg-a.singapore-postgres.render.com/gwbuilders")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
