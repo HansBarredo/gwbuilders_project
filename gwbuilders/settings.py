@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5pmpf8@z7d8+sb1)i5&+hb79@*p5$m+lldz7h7upmpw)3hfi@c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,8 +87,6 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-
-
 
 DATABASES ['default'] =dj_database_url.parse("postgresql://gwbuilders_user:SsdsPrQBgpljBMWsQcBg3HXUodV7mS6s@dpg-ctgobi56l47c73e8uccg-a.singapore-postgres.render.com/gwbuilders")
 
