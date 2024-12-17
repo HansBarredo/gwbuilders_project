@@ -73,122 +73,34 @@
         </div>
       </div>
     </section>
-    <div id="services-end" class="ends"></div>
     <section id="projects" class=" container-fluid">
       <!-- <h1 id="project-heading">Projects</h1> -->
+      <section id="projects" class="container-fluid">
+        <div
+      id="project-container"
+      class="container-fluid d-flex align-items-center justify-content-center text-center mt-1"
+    >
+      <div class="row justify-content-center gap-4">
+      {% if projects%} {% for project in projects %}
       <div
-        id="projects-container"
-        class=" cust-cont row align-items-center justify-content-center gap-2"
+        class="proj-card col-lg-3 col-md-6 col-sm-10 col-10"
       >
-        <div
-          id="proj-profile-1"
-          class="proj_profile col-lg-3 col-md-5 col-sm-10 col-10"
-        >
-          <!-- <img
-            class="img-proj img-fluid col-lg-12 col-md-12 col-sm-12 col-12"
-            src="{% static 'images/renovation.jpg' %}"
-            alt=""
-          /> -->
-          <h4>Renovation</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Accusantium veniam et atque minus ratione nemo libero distinctio
-            sed optio earum, unde provident praesentium odit placeat ea quod
-            dolor architecto iusto?
-            <a href="#">Learn more</a>
-          </p>
-        </div>
-        <div
-          id="proj-profile-2"
-          class="proj_profile col-lg-3 col-md-5 col-sm-10 col-10"
-        >
-          <!-- <img
-            class="img-proj img-fluid col-lg-12 col-md-12 col-sm-12 col-12"
-            src="{% static 'images/renovation.jpg' %}"
-            alt=""
-          /> -->
-          <h4>New-Built</h4>
-          <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusantium veniam et atque minus ratione nemo libero distinctio
-              sed optio earum, unde provident praesentium odit placeat ea quod
-              dolor architecto iusto?
-              <a href="#">Learn more</a>
-            </p>
-        </div>
-        <div
-          id="proj-profile-3"
-          class="proj_profile col-lg-3 col-md-5 col-sm-10 col-10"
-        >
-          <!-- <img
-            class="img-proj img-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12"
-            src="{% static 'images/renovation.jpg' %}"
-            alt=""
-          /> -->
-          <h4>Design and Consultancy</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Accusantium veniam et atque minus ratione nemo libero distinctio
-            sed optio earum, unde provident praesentium odit placeat ea quod
-            dolor architecto iusto?
-            <a href="#">Learn more</a>
-          </p>
-        </div>
-        <div
-          id="proj-profile-1"
-          class="proj_profile col-lg-3 col-md-5 col-sm-10 col-10"
-        >
-          <!-- <img
-            class="img-proj img-fluid col-lg-12 col-md-12 col-sm-12 col-12"
-            src="{% static 'images/renovation.jpg' %}"
-            alt=""
-          /> -->
-          <h4>Renovation</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Accusantium veniam et atque minus ratione nemo libero distinctio
-            sed optio earum, unde provident praesentium odit placeat ea quod
-            dolor architecto iusto?
-            <a href="#">Learn more</a>
-          </p>
-        </div>
-        <div
-          id="proj-profile-2"
-          class="proj_profile col-lg-3 col-md-5 col-sm-10 col-10"
-        >
-          <!-- <img
-            class="img-proj img-fluid col-lg-12 col-md-12 col-sm-12 col-12"
-            src="{% static 'images/renovation.jpg' %}"
-            alt=""
-          /> -->
-          <h4>New-Built</h4>
-          <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Accusantium veniam et atque minus ratione nemo libero distinctio
-              sed optio earum, unde provident praesentium odit placeat ea quod
-              dolor architecto iusto?
-              <a href="#">Learn more</a>
-            </p>
-        </div>
-        <div
-          id="proj-profile-3"
-          class="proj_profile col-lg-3 col-md-5 col-sm-10 col-10"
-        >
-          <!-- <img
-            class="img-prov img-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12"
-            src="{% static 'images/renovation.jpg' %}"
-            alt=""
-          /> -->
-          <h4>Design and Consultancy</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Accusantium veniam et atque minus ratione nemo libero distinctio
-            sed optio earum, unde provident praesentium odit placeat ea quod
-            dolor architecto iusto?
-            <a href="#">Learn more</a>
-          </p>
-        </div>
+        <img
+          class="img-proj col-lg-12 col-md-12 col-sm-12 col-12"
+          src="{{project.photo_main.url}}"
+          alt=""
+        />
+        <h4>{{project.title}}</h4>
+        <p>{{project.short_description}}</p>
+        <a href="{% url 'project' project.id%}">Learn More</a>
       </div>
-    </section>
-  </main>
+      {% endfor %} {% else %}
+      <div class="col-md-12">
+        <p>No Listings Available</p>
+      </div>
+      {% endif %}
+    </div>
+    </div>
+  </section>
+</main>
 {% endblock %}
