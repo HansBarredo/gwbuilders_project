@@ -22,12 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5pmpf8@z7d8+sb1)i5&+hb79@*p5$m+lldz7h7upmpw)3hfi@c'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-5pmpf8@z7d8+sb1)i5&+hb79@*p5$m+lldz7h7upmpw)3hfi@c')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ["*"]
+
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
 
 
 # Application definition
@@ -79,17 +80,7 @@ WSGI_APPLICATION = 'gwbuilders.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gwbuilders',
-        'USER': 'postgres',
-        'PASSWORD': 'asus1234',
-        'HOST': 'localhost'
-    }
-}
-
-DATABASES = {
-    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL", "postgresql://gwbuilders_user:SsdsPrQBgpljBMWsQcBg3HXUodV7mS6s@dpg-ctgobi56l47c73e8uccg-a.singapore-postgres.render.com/gwbuilders"))
 }
 
 
