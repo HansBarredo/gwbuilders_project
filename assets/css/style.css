@@ -139,13 +139,15 @@ div > #pr#projects-container {
 }
 
 #hero-projects {
-  background: url(../images/hero.jpg);
+  background: url(../images/hero-2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 30vh;
   width: 100%;
+  
 }
+
 
 #hero-projects-container {
   padding: 0;
