@@ -92,7 +92,7 @@
         />
         <h3 class="text-start px-3 fs-4 pt-3">{{project.title}}</h3>
         <p class="text-start px-3">{{project.short_description}}</p>
-        <a class="text-start px-3" href="{% url 'project' project.id%}">Learn More</a>
+        <a class="text-start px-3" href="{% url 'project' project.id %}">Learn More</a>
       </div>
       {% endfor %} {% else %}
       <div class="col-md-12">
