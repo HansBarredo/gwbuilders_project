@@ -10,6 +10,6 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('projects/', include('projects.urls')),
     path('contacts/', include('contacts.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + staticfiles_urlpatterns()
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
